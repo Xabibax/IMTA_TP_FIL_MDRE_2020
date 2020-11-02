@@ -1,0 +1,135 @@
+-- @nsURI Java=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+-- @path Data=/tp.fil/src/tp/fil/resources/Data.ecore
+
+
+module DataComputation;
+create OUT: Data from IN: Java;
+
+helper context Java!FieldDeclaration def: isDefined(): Boolean =	
+	if self.name.oclIsUndefined() then
+		false
+	else 
+		if self.type.oclIsUndefined() then
+			false
+		else 
+			if self.modifier.oclIsUndefined() then
+				false
+			else
+				if self.modifier.visibility.oclIsUndefined() then
+					false
+				else
+					true
+				endif
+			endif
+		endif
+	endif;
+
+helper context Java!MethodDeclaration def: isDefined(): Boolean =	
+	if self.name.oclIsUndefined() then
+		false
+	else
+		if self.returnType.oclIsUndefined() then
+			false
+		else
+			if self.returnType.type.oclIsUndefined() then
+				false
+			else
+				if self.returnType.type.name.oclIsUndefined() then
+					false
+				else 
+					if self.modifier.oclIsUndefined() then
+						false
+					else 
+						if self.modifier.visibility.oclIsUndefined() then
+							false
+						else
+							true
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif;
+	
+rule Model2Model {
+	from
+		s: Java!Model
+	to
+		d: Data!Model (
+			name <- s.debug('Model: ').name.debug('name: ')
+			,packages <- s.ownedElements.debug('packages: ')
+		)
+}
+
+rule Package2Package {
+	from
+		s: Java!Package
+	to
+		d: Data!Package (
+			name <- s.debug('Package: ').name.debug('name: ')
+			,packages <- s.ownedPackages.debug('packages: ')
+			,classes <- s.ownedElements.debug('classes: ') 
+				-> select(i | i.oclIsTypeOf(Java!ClassDeclaration) or i.oclIsTypeOf(Java!InterfaceDeclaration))
+		)
+}
+
+rule Class2Class {
+	from
+		s: Java!ClassDeclaration
+	to
+		d: Data!Class (
+			name <- s.debug('ClassDeclaration: ').name.debug('name: ')
+			,attributes <- s.bodyDeclarations.debug('attributes: ')
+				-> select(i | i.debug().oclIsTypeOf(Java!FieldDeclaration))
+			,methods <- s.bodyDeclarations.debug('methods: ')
+				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration))
+			,extends <- s.superClass.debug('extends: ')
+			,implements <- s.superInterfaces.debug('implements: ')
+		)
+}
+
+rule Attribute2Attribute {
+	from
+		s: Java!FieldDeclaration
+	to
+		d: Data!Attribute (
+			name <- s.debug('FieldDeclaration: ').fragments.debug('fragments: ').first().name.debug('name: ')
+			,type <- s.type.debug('type: ')
+			,status <-  
+				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
+					OclUndefined
+				else
+					if s.modifier.debug('modifier: ').visibility.oclIsUndefined() then 
+						OclUndefined
+					else
+						s.modifier.visibility.debug('visibility: ').toString()
+					endif
+				endif
+		)
+}
+
+rule Method2Method {
+	from
+		s: Java!MethodDeclaration
+	to
+		d: Data!Method (
+			name <- s.debug('MethodDeclaration: ').name.debug('name: ')
+			,returnType <- 
+				if s.returnType.oclIsUndefined() then
+					Data!Class.debug('returnType: ')
+				else
+					s.returnType.type.debug('returnType: ')
+				endif
+			,status <- 
+				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
+					OclUndefined
+				else
+					if s.modifier.debug('modifier: ').visibility.oclIsUndefined() then 
+						OclUndefined
+					else
+						s.modifier.visibility.debug('visibility: ').toString()
+					endif
+				endif
+		)
+}
+

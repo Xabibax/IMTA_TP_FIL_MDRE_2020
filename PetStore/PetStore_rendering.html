@@ -1,0 +1,747 @@
+<HTML>
+	<head>
+	<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<img src="http://yuml.me/diagram/scruffy/class/
+			[PetStore]->[com],
+		[note:PetStore example diagram{bg:wheat}],
+			[com]->[sun],
+			[sun]->[javaee],
+			[javaee]->[blueprints],
+			[blueprints]->[petstore],
+			[petstore]->[model],
+				[model]->[CatalogFacade],
+				[CatalogFacade|
+-
+					emf : invalid
+; -
+					utx : invalid
+; -
+					bDebug : invalid
+				|
+					
+					
+					+
+					getZipCodeLocations() : invalid
+; 					
+					
+					+
+					getProducts() : invalid
+; 					
+					
+					+
+					getCategories() : invalid
+; 					
+					
+					+
+					addTag() : Tag
+; 					
+					
+					+
+					addItem() : String
+; 					
+					
+					+
+					getItemsVLH() : invalid
+; 					
+					
+					+
+					getItemInChunkVLH() : invalid
+; 					
+					
+					+
+					getItem() : Item
+; 					
+					
+					+
+					updateItem() : invalid
+; 					
+					
+					+
+					getCategory() : Category
+; 					
+					
+					+
+					getAllItemsFromCategory() : invalid
+; 					
+					
+					+
+					getProducts() : invalid
+; 					
+					
+					+
+					addTagsToItemId() : invalid
+; 					
+					
+					+
+					getItemsByCategoryByRadiusVLH() : invalid
+; 					
+					
+					+
+					getItemsByCategoryVLH() : invalid
+; 					
+					
+					+
+					getItemsByItemIDByRadius() : invalid
+; 					
+					
+					+
+					getItemsByItemID() : invalid
+; 					
+					
+					+
+					contextDestroyed() : invalid
+; 					
+					
+					+
+					contextInitialized() : invalid
+; 					
+					
+					+
+					getItems() : invalid
+; 					
+					
+					+
+					doSearch() : invalid
+; 					
+					
+					+
+					getTagsInChunk() : invalid
+; 					
+					
+					+
+					getTag() : Tag
+; 					
+					-
+					
+					indexItem() : invalid
+				],
+				[model]->[ZipLocation],
+				[ZipLocation|
+-
+					zipCode : invalid
+; -
+					city : invalid
+; -
+					state : invalid
+				|
+					
+					
+					+
+					getCity() : String
+; 					
+					
+					+
+					getState() : String
+; 					
+					
+					+
+					getZipCode() : invalid
+; 					
+					
+					+
+					setZipCode() : invalid
+; 					
+					
+					+
+					setCity() : invalid
+; 					
+					
+					+
+					setState() : invalid
+				],
+				[model]->[Address],
+				[Address|
+-
+					addressID : invalid
+; -
+					street1 : invalid
+; -
+					street2 : invalid
+; -
+					city : invalid
+; -
+					state : invalid
+; -
+					zip : invalid
+; -
+					latitude : invalid
+; -
+					longitude : invalid
+; -
+					COMMA : invalid
+				|
+					
+					
+					+
+					getLatitude() : invalid
+; 					
+					
+					+
+					getLongitude() : invalid
+; 					
+					
+					+
+					addressToString() : String
+; 					
+					
+					+
+					getAddressID() : String
+; 					
+					
+					+
+					getStreet1() : String
+; 					
+					
+					+
+					getStreet2() : String
+; 					
+					
+					+
+					getCity() : String
+; 					
+					
+					+
+					getState() : String
+; 					
+					
+					+
+					getZip() : String
+; 					
+					
+					+
+					setStreet1() : invalid
+; 					
+					
+					+
+					setStreet2() : invalid
+; 					
+					
+					+
+					setAddressID() : invalid
+; 					
+					
+					+
+					setCity() : invalid
+; 					
+					
+					+
+					setState() : invalid
+; 					
+					
+					+
+					setZip() : invalid
+; 					
+					
+					+
+					setLatitude() : invalid
+; 					
+					
+					+
+					setLongitude() : invalid
+; 					
+					
+					+
+					validateWithMessage() : invalid
+				],
+				[model]->[Category],
+				[Category|
+-
+					categoryID : invalid
+; -
+					name : invalid
+; -
+					description : invalid
+; -
+					imageURL : invalid
+				|
+					
+					
+					+
+					getCategoryID() : String
+; 					
+					
+					+
+					getName() : String
+; 					
+					
+					+
+					getDescription() : String
+; 					
+					
+					+
+					getImageURL() : String
+; 					
+					
+					+
+					setImageURL() : invalid
+; 					
+					
+					+
+					setCategoryID() : invalid
+; 					
+					
+					+
+					setName() : invalid
+; 					
+					
+					+
+					setDescription() : invalid
+				],
+				[model]->[Product],
+				[Product|
+-
+					productID : invalid
+; -
+					categoryID : invalid
+; -
+					name : invalid
+; -
+					description : invalid
+; -
+					imageURL : invalid
+				|
+					
+					
+					+
+					getProductID() : String
+; 					
+					
+					+
+					getName() : String
+; 					
+					
+					+
+					getDescription() : String
+; 					
+					
+					+
+					getImageURL() : String
+; 					
+					
+					+
+					getCategoryID() : String
+; 					
+					
+					+
+					setCategoryID() : invalid
+; 					
+					
+					+
+					setProductID() : invalid
+; 					
+					
+					+
+					setName() : invalid
+; 					
+					
+					+
+					setDescription() : invalid
+; 					
+					
+					+
+					setImageURL() : invalid
+				],
+				[model]->[FileUploadResponse],
+				[FileUploadResponse|
+-
+					itemId : invalid
+; -
+					productId : invalid
+; -
+					message : invalid
+; -
+					status : invalid
+; -
+					duration : invalid
+; -
+					durationString : invalid
+; -
+					startDate : invalid
+; -
+					endDate : invalid
+; -
+					uploadSize : invalid
+; -
+					thumbnail : invalid
+				|
+					
+					
+					+
+					getMessage() : String
+; 					
+					
+					+
+					setMessage() : invalid
+; 					
+					
+					+
+					getItemId() : String
+; 					
+					
+					+
+					setItemId() : invalid
+; 					
+					
+					+
+					getProductId() : String
+; 					
+					
+					+
+					setProductId() : invalid
+; 					
+					
+					+
+					getStatus() : String
+; 					
+					
+					+
+					setStatus() : invalid
+; 					
+					
+					+
+					getDuration() : String
+; 					
+					
+					+
+					setDuration() : invalid
+; 					
+					
+					+
+					getDurationString() : String
+; 					
+					
+					+
+					setDurationString() : invalid
+; 					
+					
+					+
+					getStartDate() : String
+; 					
+					
+					+
+					setStartDate() : invalid
+; 					
+					
+					+
+					getEndDate() : String
+; 					
+					
+					+
+					setEndDate() : invalid
+; 					
+					
+					+
+					getUploadSize() : String
+; 					
+					
+					+
+					setUploadSize() : invalid
+; 					
+					
+					+
+					getThumbnail() : String
+; 					
+					
+					+
+					setThumbnail() : invalid
+				],
+				[model]->[Item],
+				[Item|
+-
+					itemID : invalid
+; -
+					productID : invalid
+; -
+					name : invalid
+; -
+					description : invalid
+; -
+					imageURL : invalid
+; -
+					imageThumbURL : invalid
+; -
+					price : invalid
+; -
+					address : invalid
+; -
+					contactInfo : invalid
+; -
+					totalScore : invalid
+; -
+					numberOfVotes : invalid
+; -
+					disabled : invalid
+; -
+					tags : invalid
+				|
+					
+					
+					+
+					validateWithMessage() : invalid
+; 					
+					
+					+
+					containsTag() : invalid
+; 					
+					
+					+
+					getTags() : invalid
+; 					
+					
+					+
+					setDisabled() : invalid
+; 					
+					
+					+
+					getProductID() : String
+; 					
+					
+					+
+					getItemID() : String
+; 					
+					
+					+
+					getName() : String
+; 					
+					
+					+
+					getDescription() : String
+; 					
+					
+					+
+					getPrice() : BigDecimal
+; 					
+					
+					+
+					getImageThumbURL() : String
+; 					
+					
+					+
+					getImageURL() : String
+; 					
+					
+					+
+					checkAverageRating() : invalid
+; 					
+					
+					+
+					tagsAsString() : String
+; 					
+					
+					+
+					getAddress() : Address
+; 					
+					
+					+
+					getContactInfo() : SellerContactInfo
+; 					
+					
+					+
+					getTotalScore() : invalid
+; 					
+					
+					+
+					getNumberOfVotes() : invalid
+; 					
+					
+					+
+					getDisabled() : invalid
+; 					
+					
+					+
+					setItemID() : invalid
+; 					
+					
+					+
+					setProductID() : invalid
+; 					
+					
+					+
+					setName() : invalid
+; 					
+					
+					+
+					setDescription() : invalid
+; 					
+					
+					+
+					setImageURL() : invalid
+; 					
+					
+					+
+					setImageThumbURL() : invalid
+; 					
+					
+					+
+					setPrice() : invalid
+; 					
+					
+					+
+					setAddress() : invalid
+; 					
+					
+					+
+					setContactInfo() : invalid
+; 					
+					
+					+
+					setTotalScore() : invalid
+; 					
+					
+					+
+					setNumberOfVotes() : invalid
+; 					
+					
+					+
+					setTags() : invalid
+; 					
+					
+					+
+					addRating() : invalid
+				],
+				[model]->[Tag],
+				[Tag|
+-
+					tagID : invalid
+; -
+					items : invalid
+; -
+					tag : invalid
+; -
+					refCount : invalid
+				|
+					
+					
+					+
+					getTagID() : invalid
+; 					
+					
+					+
+					setTagID() : invalid
+; 					
+					
+					+
+					getTag() : String
+; 					
+					
+					+
+					setTag() : invalid
+; 					
+					
+					+
+					getRefCount() : invalid
+; 					
+					
+					+
+					setRefCount() : invalid
+; 					
+					
+					+
+					incrementRefCount() : invalid
+; 					
+					
+					+
+					getItems() : invalid
+; 					
+					
+					+
+					setItems() : invalid
+; 					
+					
+					+
+					itemExists() : invalid
+				],
+				[model]->[SellerContactInfo],
+				[SellerContactInfo|
+-
+					contactInfoID : invalid
+; -
+					lastName : invalid
+; -
+					firstName : invalid
+; -
+					email : invalid
+				|
+					
+					
+					+
+					getContactInfoID() : String
+; 					
+					
+					+
+					getLastName() : String
+; 					
+					
+					+
+					getFirstName() : String
+; 					
+					
+					+
+					getEmail() : String
+; 					
+					
+					+
+					setEmail() : invalid
+; 					
+					
+					+
+					setContactInfoID() : invalid
+; 					
+					
+					+
+					setLastName() : invalid
+; 					
+					
+					+
+					setFirstName() : invalid
+; 					
+					
+					+
+					validateWithMessage() : invalid
+				],
+				[model]->[RatingBean],
+				[RatingBean|
+-
+					itemId : invalid
+; -
+					grade : invalid
+; -
+					cf : invalid
+				|
+					
+					
+					+
+					getRatingText() : invalid
+; 					
+					
+					+
+					setGrade() : invalid
+; 					
+					
+					+
+					getGrade() : invalid
+; 					
+					
+					+
+					setItemId() : invalid
+; 					
+					
+					+
+					getItemId() : String
+				],
+				[model]->[PayPalBean],
+				[PayPalBean|
++					postData : invalid
+				|
+					
+					
+					+
+					getPostData() : BuyNowPostData
+				],
+		">
+	</body>
+</HTML>
+
+
