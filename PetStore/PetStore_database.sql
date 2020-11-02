@@ -1,19 +1,19 @@
 	
-CREATE TABLE CatalogFacade(
+CREATE TABLE CatalogFacade (
 	_id: VARCHAR(255),
 	emf: VARCJAR(255),
 	utx: VARCJAR(255),
 	bDebug: VARCJAR(255)
 );
 		
-CREATE TABLE ZipLocation(
+CREATE TABLE ZipLocation (
 	_id: VARCHAR(255),
 	zipCode: VARCJAR(255),
 	city: VARCJAR(255),
 	state: VARCJAR(255)
 );
 		
-CREATE TABLE Address(
+CREATE TABLE Address (
 	_id: VARCHAR(255),
 	addressID: VARCJAR(255),
 	street1: VARCJAR(255),
@@ -26,7 +26,7 @@ CREATE TABLE Address(
 	COMMA: VARCJAR(255)
 );
 		
-CREATE TABLE Category(
+CREATE TABLE Category (
 	_id: VARCHAR(255),
 	categoryID: VARCJAR(255),
 	name: VARCJAR(255),
@@ -34,7 +34,7 @@ CREATE TABLE Category(
 	imageURL: VARCJAR(255)
 );
 		
-CREATE TABLE Product(
+CREATE TABLE Product (
 	_id: VARCHAR(255),
 	productID: VARCJAR(255),
 	categoryID: VARCJAR(255),
@@ -43,7 +43,7 @@ CREATE TABLE Product(
 	imageURL: VARCJAR(255)
 );
 		
-CREATE TABLE FileUploadResponse(
+CREATE TABLE FileUploadResponse (
 	_id: VARCHAR(255),
 	itemId: VARCJAR(255),
 	productId: VARCJAR(255),
@@ -57,7 +57,7 @@ CREATE TABLE FileUploadResponse(
 	thumbnail: VARCJAR(255)
 );
 		
-CREATE TABLE Item(
+CREATE TABLE Item (
 	_id: VARCHAR(255),
 	itemID: VARCJAR(255),
 	productID: VARCJAR(255),
@@ -74,7 +74,7 @@ CREATE TABLE Item(
 	tags: VARCJAR(255)
 );
 		
-CREATE TABLE Tag(
+CREATE TABLE Tag (
 	_id: VARCHAR(255),
 	tagID: VARCJAR(255),
 	items: VARCJAR(255),
@@ -82,7 +82,7 @@ CREATE TABLE Tag(
 	refCount: VARCJAR(255)
 );
 		
-CREATE TABLE SellerContactInfo(
+CREATE TABLE SellerContactInfo (
 	_id: VARCHAR(255),
 	contactInfoID: VARCJAR(255),
 	lastName: VARCJAR(255),
@@ -90,14 +90,14 @@ CREATE TABLE SellerContactInfo(
 	email: VARCJAR(255)
 );
 		
-CREATE TABLE RatingBean(
+CREATE TABLE RatingBean (
 	_id: VARCHAR(255),
 	itemId: VARCJAR(255),
 	grade: VARCJAR(255),
 	cf: VARCJAR(255)
 );
 		
-CREATE TABLE PayPalBean(
+CREATE TABLE PayPalBean (
 	_id: VARCHAR(255),
 	postData: VARCJAR(255)
 );
