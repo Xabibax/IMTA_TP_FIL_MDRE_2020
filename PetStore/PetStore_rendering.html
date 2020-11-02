@@ -122,9 +122,9 @@
 -
 					zipCode : invalid
 ; -
-					city : invalid
+					city : String
 ; -
-					state : invalid
+					state : String
 				|
 					
 					
@@ -154,23 +154,23 @@
 				[model]->[Address],
 				[Address|
 -
-					addressID : invalid
+					addressID : String
 ; -
-					street1 : invalid
+					street1 : String
 ; -
-					street2 : invalid
+					street2 : String
 ; -
-					city : invalid
+					city : String
 ; -
-					state : invalid
+					state : String
 ; -
-					zip : invalid
+					zip : String
 ; -
 					latitude : invalid
 ; -
 					longitude : invalid
 ; -
-					COMMA : invalid
+					COMMA : String
 				|
 					
 					
@@ -248,13 +248,13 @@
 				[model]->[Category],
 				[Category|
 -
-					categoryID : invalid
+					categoryID : String
 ; -
-					name : invalid
+					name : String
 ; -
-					description : invalid
+					description : String
 ; -
-					imageURL : invalid
+					imageURL : String
 				|
 					
 					
@@ -292,15 +292,15 @@
 				[model]->[Product],
 				[Product|
 -
-					productID : invalid
+					productID : String
 ; -
-					categoryID : invalid
+					categoryID : String
 ; -
-					name : invalid
+					name : String
 ; -
-					description : invalid
+					description : String
 ; -
-					imageURL : invalid
+					imageURL : String
 				|
 					
 					
@@ -346,25 +346,25 @@
 				[model]->[FileUploadResponse],
 				[FileUploadResponse|
 -
-					itemId : invalid
+					itemId : String
 ; -
-					productId : invalid
+					productId : String
 ; -
-					message : invalid
+					message : String
 ; -
-					status : invalid
+					status : String
 ; -
-					duration : invalid
+					duration : String
 ; -
-					durationString : invalid
+					durationString : String
 ; -
-					startDate : invalid
+					startDate : String
 ; -
-					endDate : invalid
+					endDate : String
 ; -
-					uploadSize : invalid
+					uploadSize : String
 ; -
-					thumbnail : invalid
+					thumbnail : String
 				|
 					
 					
@@ -450,23 +450,23 @@
 				[model]->[Item],
 				[Item|
 -
-					itemID : invalid
+					itemID : String
 ; -
-					productID : invalid
+					productID : String
 ; -
-					name : invalid
+					name : String
 ; -
-					description : invalid
+					description : String
 ; -
-					imageURL : invalid
+					imageURL : String
 ; -
-					imageThumbURL : invalid
+					imageThumbURL : String
 ; -
-					price : invalid
+					price : BigDecimal
 ; -
-					address : invalid
+					address : Address
 ; -
-					contactInfo : invalid
+					contactInfo : SellerContactInfo
 ; -
 					totalScore : invalid
 ; -
@@ -608,7 +608,7 @@
 ; -
 					items : invalid
 ; -
-					tag : invalid
+					tag : String
 ; -
 					refCount : invalid
 				|
@@ -656,13 +656,13 @@
 				[model]->[SellerContactInfo],
 				[SellerContactInfo|
 -
-					contactInfoID : invalid
+					contactInfoID : String
 ; -
-					lastName : invalid
+					lastName : String
 ; -
-					firstName : invalid
+					firstName : String
 ; -
-					email : invalid
+					email : String
 				|
 					
 					
@@ -704,11 +704,11 @@
 				[model]->[RatingBean],
 				[RatingBean|
 -
-					itemId : invalid
+					itemId : String
 ; -
 					grade : invalid
 ; -
-					cf : invalid
+					cf : CatalogFacade
 				|
 					
 					
@@ -733,7 +733,7 @@
 				],
 				[model]->[PayPalBean],
 				[PayPalBean|
-+					postData : invalid
++					postData : BuyNowPostData
 				|
 					
 					

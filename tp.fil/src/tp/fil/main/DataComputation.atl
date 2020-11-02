@@ -94,7 +94,11 @@ rule Attribute2Attribute {
 	to
 		d: Data!Attribute (
 			name <- s.debug('FieldDeclaration: ').fragments.debug('fragments: ').first().name.debug('name: ')
-			,type <- s.type.debug('type: ')
+			,type <- if (not s.type.oclIsUndefined()) then
+					s.type.type.debug('type: ')
+				else
+					OclUndefined
+				endif
 			,status <-  
 				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
 					OclUndefined
@@ -114,12 +118,11 @@ rule Method2Method {
 	to
 		d: Data!Method (
 			name <- s.debug('MethodDeclaration: ').name.debug('name: ')
-			,returnType <- 
-				if s.returnType.oclIsUndefined() then
-					Data!Class.debug('returnType: ')
+			,returnType <- if (not s.returnType.oclIsUndefined().debug('returnType is undefined: ')) then
+					s.returnType.type.debug('type: ')
 				else
-					s.returnType.type.debug('returnType: ')
-				endif
+					OclUndefined
+				endif 
 			,status <- 
 				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
 					OclUndefined
