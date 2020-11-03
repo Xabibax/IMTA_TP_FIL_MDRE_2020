@@ -11,40 +11,41 @@
 	</head>
 	<body>
 		<img src="http://yuml.me/diagram/scruffy/class/
-		[comment Model/]
-		[for (com: Package | model.packages)][if (com.name = 'com') ]
+			[comment Model/]
+			[for (com: Package | model.packages)][if (com.name = 'com') ]
 			['['/][model.name/][']'/]->['['/][com.name/][']'/],
-		['['/]note:[model.name/] example diagram{bg:wheat}[']'/],
-		[for (sun: Package | com.packages)][if (sun.name = 'sun')]
+			['['/]note:[model.name/] example diagram{bg:wheat}[']'/],
+			[for (sun: Package | com.packages)][if (sun.name = 'sun')]
 			['['/][com.name/][']'/]->['['/][sun.name/][']'/],
-		[for (javaee: Package | sun.packages)][if (javaee.name = 'javaee')]	
+			[for (javaee: Package | sun.packages)][if (javaee.name = 'javaee')]	
 			['['/][sun.name/][']'/]->['['/][javaee.name/][']'/],
-		[for (blueprints: Package | javaee.packages)][if (blueprints.name = 'blueprints')]	
+			[for (blueprints: Package | javaee.packages)][if (blueprints.name = 'blueprints')]	
 			['['/][javaee.name/][']'/]->['['/][blueprints.name/][']'/],
-		[for (petstore: Package | blueprints.packages)][if (petstore.name = 'petstore')]	
+			[for (petstore: Package | blueprints.packages)][if (petstore.name = 'petstore')]	
 			['['/][blueprints.name/][']'/]->['['/][petstore.name/][']'/],
-		[for (modelPackage: Package | petstore.packages)][if (modelPackage.name = 'model')]
+			[for (modelPackage: Package | petstore.packages)][if (modelPackage.name = 'model')]
 			['['/][petstore.name/][']'/]->['['/][modelPackage.name/][']'/],
 			[comment Classes/]
 			[for (class: Class | modelPackage.classes) ]
-				['['/][modelPackage.name/][']'/]->['['/][class.name/][']'/],
-				[comment Attributes/]
-				['['/][class.name/]|
-				[for (attribute: Attribute | class.attributes) separator ('; ')]
-					[if (attribute.status='private')]-
-					[elseif (attribute.status='protected')]#
-					[else]+[/if]
-					[self.name/] : [attribute.type.name/]
-				[/for]
-				[comment Methods/]
-				|
-				[for (method: Method | class.methods) separator ('; ') ]
-					[if (method.status='private')]-
-					[elseif (method.status='protected')]#
-					[else]+[/if]
-					[self.name/]() : [method.returnType.name/]
-				[/for]
-				],
+			['['/][modelPackage.name/][']'/]->['['/][class.name/][']'/],
+			['['/][class.name/]
+			[comment Attributes/]
+			|
+			[for (attribute: Attribute | class.attributes) separator ('; ')]
+				[if (attribute.status='private')]-
+				[elseif (attribute.status='protected')]#
+				[else]+[/if]
+				[self.name/] : [attribute.type.name/]				
+			[/for]
+			[comment Methods/]
+			|
+			[for (method: Method | class.methods) separator ('; ') ]
+				[if (method.status='private')]-
+				[elseif (method.status='protected')]#
+				[else]+[/if]
+				[self.name/]() : [method.returnType.name/]
+			[/for]
+			],
 			[/for]
 		[/if][/for]
 		[/if][/for]

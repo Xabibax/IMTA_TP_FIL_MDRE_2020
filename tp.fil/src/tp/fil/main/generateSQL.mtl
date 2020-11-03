@@ -5,7 +5,6 @@
 [template public generateSQL(model : Model) post (trim())]
 [comment @main/] 
 [file ('PetStore_database.sql', false, 'UTF-8')]
-	
 [comment Model/]
 [for (com: Package | model.packages)][if (com.name = 'com') ]
 [for (sun: Package | com.packages)][if (sun.name = 'sun')]
@@ -13,24 +12,22 @@
 [for (blueprints: Package | javaee.packages)][if (blueprints.name = 'blueprints')]	
 [for (petstore: Package | blueprints.packages)][if (petstore.name = 'petstore')]	
 [for (modelPackage: Package | petstore.packages)][if (modelPackage.name = 'model')]
-	[comment Classes/]
-	[for (class: Class | modelPackage.classes) ]
+[comment Classes/]
+[for (class: Class | modelPackage.classes) ]
 CREATE TABLE [self.name/] (
 	_id: VARCHAR(255),
 [comment Attributes/]
-		[for (attribute: Attribute | class.attributes) 
-			before ('\t')
-			separator (': VARCJAR(255),\n\t') 
-			after (': VARCJAR(255)\n);\n')]
-[self.name/][/for]
+[for (attribute: Attribute | class.attributes) 
+	separator (': VARCJAR(255),\n') 
+	after (': VARCJAR(255)\n);\n')]
+	[self.name/][/for]
 		
-	[/for]
+[/for]
 [/if][/for]
 [/if][/for]
 [/if][/for]
 [/if][/for]
 [/if][/for]
 [/if][/for]
-
 [/file]
 [/template]

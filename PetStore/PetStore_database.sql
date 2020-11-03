@@ -1,4 +1,3 @@
-	
 CREATE TABLE CatalogFacade (
 	_id: VARCHAR(255),
 	emf: VARCJAR(255),
@@ -102,4 +101,3 @@ CREATE TABLE PayPalBean (
 	postData: VARCJAR(255)
 );
 		
-
