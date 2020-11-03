@@ -39,9 +39,9 @@
 				[comment Methods/]
 				|
 				[for (method: Method | class.methods) separator ('; ') ]
-					[if (method.status='protected')]#[/if]
-					[if (method.status='private')]-[/if]
-					[if (method.status<>'protected' and method.status<>'private')]+[/if]
+					[if (method.status='private')]-
+					[elseif (method.status='protected')]#
+					[else]+[/if]
 					[self.name/]() : [method.returnType.name/]
 				[/for]
 				],

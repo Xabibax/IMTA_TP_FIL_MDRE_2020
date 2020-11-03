@@ -80,7 +80,11 @@ rule Class2Class {
 		d: Data!Class (
 			name <- s.debug('ClassDeclaration: ').name.debug('name: ')
 			,attributes <- s.bodyDeclarations.debug('attributes: ')
-				-> select(i | i.debug().oclIsTypeOf(Java!FieldDeclaration))
+				-> select(i | 
+					i.debug().oclIsTypeOf(Java!FieldDeclaration)
+					or i.oclIsTypeOf(Java!PrimitiveType)
+					or i.oclIsTypeOf(Java!ParameterizedType)
+					)
 			,methods <- s.bodyDeclarations.debug('methods: ')
 				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration))
 			,extends <- s.superClass.debug('extends: ')
@@ -88,7 +92,63 @@ rule Class2Class {
 		)
 }
 
-rule Attribute2Attribute {
+rule Interface2Class {
+	from
+		s: Java!InterfaceDeclaration
+	to
+		d: Data!Class (
+			name <- s.debug('InterfaceDeclaration: ').name.debug('name: ')
+			,attributes <- s.bodyDeclarations.debug('attributes: ')
+				-> select(i | 
+					i.debug().oclIsTypeOf(Java!FieldDeclaration)
+					or i.oclIsTypeOf(Java!PrimitiveType)
+					or i.oclIsTypeOf(Java!ParameterizedType)
+					or i.oclIsTypeOf(Java!ArrayType)
+					)
+			,methods <- s.bodyDeclarations.debug('methods: ')
+				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration))
+			,extends <- s.superInterfaces.debug('extends: ')
+		)
+}
+
+rule PrimitiveType2Class {
+	from
+		s: Java!PrimitiveType
+	to
+		d: Data!Class (
+			name <- s.debug('PrimitiveType: ').name.debug('name: ')
+		)
+}
+
+rule ParametrizedType2Class {
+	from
+		s: Java!ParameterizedType
+	to
+		d: Data!Class (
+			name <- s.debug('ParameterizedType: ').name
+				.replaceAll('[', 'I')
+				.replaceAll(']', 'I')
+				.replaceAll('<', '*')
+				.replaceAll('>', '*')
+				.debug('name: ')
+		)
+}
+
+rule ArrayType2Class {
+	from
+		s: Java!ArrayType
+	to
+		d: Data!Class (
+			name <- s.debug('ArrayType: ').name
+				.replaceAll('[', 'I')
+				.replaceAll(']', 'I')
+				.replaceAll('<', '*')
+				.replaceAll('>', '*')
+				.debug('name: ')
+		)
+}
+
+rule FieldDeclaration2Attribute {
 	from
 		s: Java!FieldDeclaration
 	to
@@ -97,14 +157,14 @@ rule Attribute2Attribute {
 			,type <- if (not s.type.oclIsUndefined()) then
 					s.type.type.debug('type: ')
 				else
-					OclUndefined
+					Java!PrimitiveTypeVoid
 				endif
 			,status <-  
 				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
-					OclUndefined
+					'public'
 				else
 					if s.modifier.debug('modifier: ').visibility.oclIsUndefined() then 
-						OclUndefined
+						'public'
 					else
 						s.modifier.visibility.debug('visibility: ').toString()
 					endif
@@ -121,14 +181,14 @@ rule Method2Method {
 			,returnType <- if (not s.returnType.oclIsUndefined().debug('returnType is undefined: ')) then
 					s.returnType.type.debug('type: ')
 				else
-					OclUndefined
+					Java!PrimitiveTypeVoid
 				endif 
 			,status <- 
 				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
-					OclUndefined
+					'public'
 				else
 					if s.modifier.debug('modifier: ').visibility.oclIsUndefined() then 
-						OclUndefined
+						'public'
 					else
 						s.modifier.visibility.debug('visibility: ').toString()
 					endif
