@@ -18,8 +18,8 @@ CREATE TABLE [self.name/] (
 	_id: VARCHAR(255),
 [comment Attributes/]
 [for (attribute: Attribute | class.attributes) 
-	separator (': VARCJAR(255),\n') 
-	after (': VARCJAR(255)\n);\n')]
+	separator (': VARCHAR(255),\n') 
+	after (': VARCHAR(255)\n);\n')]
 	[self.name/][/for]
 		
 [/for]

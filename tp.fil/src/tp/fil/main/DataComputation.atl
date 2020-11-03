@@ -4,52 +4,6 @@
 
 module DataComputation;
 create OUT: Data from IN: Java;
-
-helper context Java!FieldDeclaration def: isDefined(): Boolean =	
-	if self.name.oclIsUndefined() then
-		false
-	else 
-		if self.type.oclIsUndefined() then
-			false
-		else 
-			if self.modifier.oclIsUndefined() then
-				false
-			else
-				if self.modifier.visibility.oclIsUndefined() then
-					false
-				else
-					true
-				endif
-			endif
-		endif
-	endif;
-
-helper context Java!MethodDeclaration def: isDefined(): Boolean =	
-	if self.name.oclIsUndefined() then
-		false
-	else
-		if self.returnType.oclIsUndefined() then
-			false
-		else
-			if self.returnType.type.oclIsUndefined() then
-				false
-			else
-				if self.returnType.type.name.oclIsUndefined() then
-					false
-				else 
-					if self.modifier.oclIsUndefined() then
-						false
-					else 
-						if self.modifier.visibility.oclIsUndefined() then
-							false
-						else
-							true
-						endif
-					endif
-				endif
-			endif
-		endif
-	endif;
 	
 rule Model2Model {
 	from
