@@ -4,6 +4,345 @@
 	</head>
 	<body>
 		<img src="http://yuml.me/diagram/scruffy/class/
+			[PetStore]->[com],
+			[note:PetStore example diagram{bg:wheat}],
+			[com]->[sun],
+			[sun]->[javaee],
+			[javaee]->[blueprints],
+			[blueprints]->[petstore],
+			[petstore]->[model],
+			[model]->[CatalogFacade],
+			[CatalogFacade
+			|
+-
+				emf : EntityManagerFactory				
+; -
+				utx : UserTransaction				
+; -
+				bDebug : boolean				
+			|
++				getZipCodeLocations() : java.util.List*com.sun.javaee.blueprints.petstore.model.ZipLocation*
+; +				getProducts() : java.util.List*com.sun.javaee.blueprints.petstore.model.Product*
+; +				getCategories() : java.util.List*com.sun.javaee.blueprints.petstore.model.Category*
+; +				addTag() : Tag
+; +				addItem() : String
+; +				getItemsVLH() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getItemInChunkVLH() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getItem() : Item
+; +				updateItem() : void
+; +				getCategory() : Category
+; +				getAllItemsFromCategory() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getProducts() : java.util.List*com.sun.javaee.blueprints.petstore.model.Product*
+; +				addTagsToItemId() : void
+; +				getItemsByCategoryByRadiusVLH() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getItemsByCategoryVLH() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getItemsByItemIDByRadius() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				getItemsByItemID() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				CatalogFacade() : CatalogFacade
+; +				contextDestroyed() : void
+; +				contextInitialized() : void
+; +				getItems() : java.util.List*com.sun.javaee.blueprints.petstore.model.Item*
+; +				doSearch() : Collection
+; +				getTagsInChunk() : java.util.List*com.sun.javaee.blueprints.petstore.model.Tag*
+; +				getTag() : Tag
+; -
+				indexItem() : void
+			],
+			[model]->[ZipLocation],
+			[ZipLocation
+			|
+-
+				zipCode : int				
+; -
+				city : String				
+; -
+				state : String				
+			|
++				getCity() : String
+; +				getState() : String
+; +				getZipCode() : int
+; +				ZipLocation() : ZipLocation
+; +				setZipCode() : void
+; +				setCity() : void
+; +				setState() : void
+			],
+			[model]->[Address],
+			[Address
+			|
+-
+				addressID : String				
+; -
+				street1 : String				
+; -
+				street2 : String				
+; -
+				city : String				
+; -
+				state : String				
+; -
+				zip : String				
+; -
+				latitude : double				
+; -
+				longitude : double				
+; -
+				COMMA : String				
+			|
++				Address() : Address
+; +				getLatitude() : double
+; +				getLongitude() : double
+; +				addressToString() : String
+; +				Address() : Address
+; +				getAddressID() : String
+; +				getStreet1() : String
+; +				getStreet2() : String
+; +				getCity() : String
+; +				getState() : String
+; +				getZip() : String
+; +				setStreet1() : void
+; +				setStreet2() : void
+; +				setAddressID() : void
+; +				setCity() : void
+; +				setState() : void
+; +				setZip() : void
+; +				setLatitude() : void
+; +				setLongitude() : void
+; +				validateWithMessage() : java.lang.StringII
+			],
+			[model]->[Category],
+			[Category
+			|
+-
+				categoryID : String				
+; -
+				name : String				
+; -
+				description : String				
+; -
+				imageURL : String				
+			|
++				getCategoryID() : String
+; +				getName() : String
+; +				getDescription() : String
+; +				getImageURL() : String
+; +				Category() : Category
+; +				setImageURL() : void
+; +				setCategoryID() : void
+; +				setName() : void
+; +				setDescription() : void
+			],
+			[model]->[Product],
+			[Product
+			|
+-
+				productID : String				
+; -
+				categoryID : String				
+; -
+				name : String				
+; -
+				description : String				
+; -
+				imageURL : String				
+			|
++				getProductID() : String
+; +				getName() : String
+; +				getDescription() : String
+; +				getImageURL() : String
+; +				Product() : Product
+; +				Product() : Product
+; +				getCategoryID() : String
+; +				setCategoryID() : void
+; +				setProductID() : void
+; +				setName() : void
+; +				setDescription() : void
+; +				setImageURL() : void
+			],
+			[model]->[FileUploadResponse],
+			[FileUploadResponse
+			|
+-
+				itemId : String				
+; -
+				productId : String				
+; -
+				message : String				
+; -
+				status : String				
+; -
+				duration : String				
+; -
+				durationString : String				
+; -
+				startDate : String				
+; -
+				endDate : String				
+; -
+				uploadSize : String				
+; -
+				thumbnail : String				
+			|
++				FileUploadResponse() : FileUploadResponse
+; +				FileUploadResponse() : FileUploadResponse
+; +				getMessage() : String
+; +				setMessage() : void
+; +				getItemId() : String
+; +				setItemId() : void
+; +				getProductId() : String
+; +				setProductId() : void
+; +				getStatus() : String
+; +				setStatus() : void
+; +				getDuration() : String
+; +				setDuration() : void
+; +				getDurationString() : String
+; +				setDurationString() : void
+; +				getStartDate() : String
+; +				setStartDate() : void
+; +				getEndDate() : String
+; +				setEndDate() : void
+; +				getUploadSize() : String
+; +				setUploadSize() : void
+; +				getThumbnail() : String
+; +				setThumbnail() : void
+			],
+			[model]->[Item],
+			[Item
+			|
+-
+				itemID : String				
+; -
+				productID : String				
+; -
+				name : String				
+; -
+				description : String				
+; -
+				imageURL : String				
+; -
+				imageThumbURL : String				
+; -
+				price : BigDecimal				
+; -
+				address : Address				
+; -
+				contactInfo : SellerContactInfo				
+; -
+				totalScore : int				
+; -
+				numberOfVotes : int				
+; -
+				disabled : int				
+; -
+				tags : java.util.Collection*com.sun.javaee.blueprints.petstore.model.Tag*				
+			|
++				Item() : Item
+; +				validateWithMessage() : java.lang.StringII
+; +				containsTag() : boolean
+; +				getTags() : java.util.Collection*com.sun.javaee.blueprints.petstore.model.Tag*
+; +				setDisabled() : void
+; +				getProductID() : String
+; +				getItemID() : String
+; +				getName() : String
+; +				getDescription() : String
+; +				getPrice() : BigDecimal
+; +				getImageThumbURL() : String
+; +				getImageURL() : String
+; +				checkAverageRating() : int
+; +				tagsAsString() : String
+; +				getAddress() : Address
+; +				Item() : Item
+; +				getContactInfo() : SellerContactInfo
+; +				getTotalScore() : int
+; +				getNumberOfVotes() : int
+; +				getDisabled() : int
+; +				setItemID() : void
+; +				setProductID() : void
+; +				setName() : void
+; +				setDescription() : void
+; +				setImageURL() : void
+; +				setImageThumbURL() : void
+; +				setPrice() : void
+; +				setAddress() : void
+; +				setContactInfo() : void
+; +				setTotalScore() : void
+; +				setNumberOfVotes() : void
+; +				setTags() : void
+; +				addRating() : void
+			],
+			[model]->[Tag],
+			[Tag
+			|
+-
+				tagID : int				
+; -
+				items : java.util.Collection*com.sun.javaee.blueprints.petstore.model.Item*				
+; -
+				tag : String				
+; -
+				refCount : int				
+			|
++				Tag() : Tag
+; +				Tag() : Tag
+; +				getTagID() : int
+; +				setTagID() : void
+; +				getTag() : String
+; +				setTag() : void
+; +				getRefCount() : int
+; +				setRefCount() : void
+; +				incrementRefCount() : void
+; +				getItems() : java.util.Collection*com.sun.javaee.blueprints.petstore.model.Item*
+; +				setItems() : void
+; +				itemExists() : boolean
+			],
+			[model]->[SellerContactInfo],
+			[SellerContactInfo
+			|
+-
+				contactInfoID : String				
+; -
+				lastName : String				
+; -
+				firstName : String				
+; -
+				email : String				
+			|
++				SellerContactInfo() : SellerContactInfo
+; +				SellerContactInfo() : SellerContactInfo
+; +				getContactInfoID() : String
+; +				getLastName() : String
+; +				getFirstName() : String
+; +				getEmail() : String
+; +				setEmail() : void
+; +				setContactInfoID() : void
+; +				setLastName() : void
+; +				setFirstName() : void
+; +				validateWithMessage() : java.lang.StringII
+			],
+			[model]->[RatingBean],
+			[RatingBean
+			|
+-
+				itemId : String				
+; -
+				grade : int				
+; -
+				cf : CatalogFacade				
+			|
++				RatingBean() : RatingBean
+; +				getRatingText() : java.lang.StringII
+; +				setGrade() : void
+; +				getGrade() : int
+; +				setItemId() : void
+; +				getItemId() : String
+			],
+			[model]->[PayPalBean],
+			[PayPalBean
+			|
++				postData : BuyNowPostData				
+			|
++				PayPalBean() : PayPalBean
+; +				getPostData() : BuyNowPostData
+			],
 		">
 	</body>
 </HTML>

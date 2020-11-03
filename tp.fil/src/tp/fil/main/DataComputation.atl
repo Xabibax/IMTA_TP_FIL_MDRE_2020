@@ -84,9 +84,12 @@ rule Class2Class {
 					i.debug().oclIsTypeOf(Java!FieldDeclaration)
 					or i.oclIsTypeOf(Java!PrimitiveType)
 					or i.oclIsTypeOf(Java!ParameterizedType)
-					)
+				)
 			,methods <- s.bodyDeclarations.debug('methods: ')
-				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration))
+				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration)
+					or i.oclIsTypeOf(Java!PrimitiveType)
+					or i.oclIsTypeOf(Java!ConstructorDeclaration)
+				)
 			,extends <- s.superClass.debug('extends: ')
 			,implements <- s.superInterfaces.debug('implements: ')
 		)
@@ -104,7 +107,7 @@ rule Interface2Class {
 					or i.oclIsTypeOf(Java!PrimitiveType)
 					or i.oclIsTypeOf(Java!ParameterizedType)
 					or i.oclIsTypeOf(Java!ArrayType)
-					)
+				)
 			,methods <- s.bodyDeclarations.debug('methods: ')
 				-> select(i |  i.oclIsTypeOf(Java!MethodDeclaration))
 			,extends <- s.superInterfaces.debug('extends: ')
@@ -183,6 +186,26 @@ rule Method2Method {
 				else
 					Java!PrimitiveTypeVoid
 				endif 
+			,status <- 
+				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
+					'public'
+				else
+					if s.modifier.debug('modifier: ').visibility.oclIsUndefined() then 
+						'public'
+					else
+						s.modifier.visibility.debug('visibility: ').toString()
+					endif
+				endif
+		)
+}
+
+rule Constructor2Method {
+	from
+		s: Java!ConstructorDeclaration
+	to
+		d: Data!Method (
+			name <- s.debug('ConstructorDeclaration: ').name.debug('name: ')
+			,returnType <- s.abstractTypeDeclaration
 			,status <- 
 				if s.modifier.oclIsUndefined().debug('modifier is undefined? :') then
 					'public'

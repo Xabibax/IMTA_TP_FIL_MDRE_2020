@@ -76,91 +76,91 @@
   <data:Package name="xml" packages="/74"/>
   <data:Package classes="/254" name="sax"/>
   <data:Class name="CaptchaSingleton" attributes="/367" methods="/572"/>
-  <data:Class name="SimpleCaptcha" attributes="/368 /369 /370 /371" methods="/573 /574 /575 /576 /577 /578"/>
-  <data:Class name="RandomString" attributes="/372" methods="/579 /580 /581"/>
-  <data:Class name="BlueFilter" methods="/582"/>
+  <data:Class name="SimpleCaptcha" attributes="/368 /369 /370 /371" methods="/573 /574 /575 /1184 /576 /577 /578"/>
+  <data:Class name="RandomString" attributes="/372" methods="/579 /580 /581 /1185"/>
+  <data:Class name="BlueFilter" methods="/1186 /582"/>
   <data:Class name="ControllerServlet" attributes="/373 /374" methods="/584 /585 /586 /587"/>
-  <data:Class name="AutocompleteBean" attributes="/375 /376 /377 /378 /379 /380" methods="/588 /589 /590 /591 /592 /593"/>
-  <data:Class name="EntryFilter" attributes="/381 /382 /383" methods="/594 /595 /596 /597 /598 /599 /600 /601"/>
-  <data:Class name="AddressBean" attributes="/384 /385 /386 /387 /388" methods="/602 /603 /604 /605 /606 /607 /608 /609"/>
-  <data:Class name="FileUploadBean" attributes="/389 /390 /391 /392 /393 /394 /395" methods="/610 /611 /612 /613 /614 /615 /616 /617 /618"/>
+  <data:Class name="AutocompleteBean" attributes="/375 /376 /377 /378 /379 /380" methods="/1187 /588 /589 /590 /591 /592 /593"/>
+  <data:Class name="EntryFilter" attributes="/381 /382 /383" methods="/1188 /594 /595 /596 /597 /598 /599 /600 /601"/>
+  <data:Class name="AddressBean" attributes="/384 /385 /386 /387 /388" methods="/1189 /602 /603 /604 /605 /606 /607 /608 /609"/>
+  <data:Class name="FileUploadBean" attributes="/389 /390 /391 /392 /393 /394 /395" methods="/1190 /610 /611 /612 /613 /614 /615 /616 /617 /618"/>
   <data:Class name="CaptchaValidateFilter" attributes="/396 /397 /398 /399" methods="/619 /620 /621 /622 /623 /624 /625 /626 /627 /628"/>
-  <data:Class name="CaptchaAction" attributes="/400 /401" methods="/629"/>
-  <data:Class name="CatalogXmlAction" attributes="/402 /403 /404 /405" methods="/630 /631 /632 /633 /634"/>
-  <data:Class name="DefaultControllerAction" attributes="/406 /407 /408" methods="/635 /636 /637"/>
-  <data:Class name="ImageAction" attributes="/409 /410 /411 /412" methods="/638"/>
-  <data:Class name="TagXmlAction" attributes="/413" methods="/639"/>
-  <data:Class name="CatalogFacade" attributes="/414 /415 /416" methods="/640 /641 /642 /643 /644 /645 /646 /647 /648 /649 /650 /651 /652 /653 /654 /655 /656 /657 /658 /659 /660 /661 /662 /663"/>
-  <data:Class name="ZipLocation" attributes="/417 /418 /419" methods="/664 /665 /666 /667 /668 /669"/>
-  <data:Class name="Address" attributes="/420 /421 /422 /423 /424 /425 /426 /427 /428" methods="/670 /671 /672 /673 /674 /675 /676 /677 /678 /679 /680 /681 /682 /683 /684 /685 /686 /687"/>
-  <data:Class name="Category" attributes="/429 /430 /431 /432" methods="/688 /689 /690 /691 /692 /693 /694 /695"/>
-  <data:Class name="Product" attributes="/433 /434 /435 /436 /437" methods="/696 /697 /698 /699 /700 /701 /702 /703 /704 /705"/>
-  <data:Class name="FileUploadResponse" attributes="/438 /439 /440 /441 /442 /443 /444 /445 /446 /447" methods="/706 /707 /708 /709 /710 /711 /712 /713 /714 /715 /716 /717 /718 /719 /720 /721 /722 /723 /724 /725"/>
-  <data:Class name="Item" attributes="/448 /449 /450 /451 /452 /453 /454 /455 /456 /457 /458 /459 /460" methods="/726 /727 /728 /729 /730 /731 /732 /733 /734 /735 /736 /737 /738 /739 /740 /741 /742 /743 /744 /745 /746 /747 /748 /749 /750 /751 /752 /753 /754 /755 /756"/>
-  <data:Class name="Tag" attributes="/461 /462 /463 /464" methods="/757 /758 /759 /760 /761 /762 /763 /764 /765 /766"/>
-  <data:Class name="SellerContactInfo" attributes="/465 /466 /467 /468" methods="/767 /768 /769 /770 /771 /772 /773 /774 /775"/>
-  <data:Class name="RatingBean" attributes="/469 /470 /471" methods="/776 /777 /778 /779 /780"/>
-  <data:Class name="PayPalBean" attributes="/472" methods="/781"/>
-  <data:Class name="PetstoreUtil" attributes="/473 /474" methods="/782 /783 /784 /785 /786 /787 /788"/>
-  <data:Class name="PetstoreConstants" attributes="/475 /476 /477 /478"/>
-  <data:Class name="ImageScaler" attributes="/479 /480 /481 /482" methods="/789 /790 /791 /792 /793 /794"/>
-  <data:Class name="GeoCoder" attributes="/483 /484 /485 /486 /487 /488 /489" methods="/795 /796 /797 /798 /799 /800 /801 /802 /803 /804"/>
-  <data:Class name="GeoPoint" attributes="/490 /491 /492 /493 /494 /495 /496" methods="/805 /806 /807 /808 /809 /810 /811 /812 /813 /814 /815 /816 /817 /818 /819"/>
-  <data:Class name="MapBean" attributes="/497 /498 /499 /500 /501 /502 /503 /504" methods="/820 /821 /822 /823 /824 /825 /826 /827 /828 /829 /830 /831 /832 /833 /834 /835 /836 /837 /838 /839 /840 /841 /842 /843 /844 /845 /846 /847"/>
-  <data:Class name="IndexDocument" attributes="/505 /506" methods="/848 /849 /850 /851 /852 /853 /854 /855 /856 /857 /858 /859 /860 /861 /862 /863 /864 /865 /866 /867 /868 /869 /870 /871 /872"/>
-  <data:Class name="Indexer" attributes="/507" methods="/873 /874 /875"/>
-  <data:Class name="UpdateIndex" attributes="/508 /509 /510" methods="/876 /877 /878"/>
-  <data:Class name="SearchBean" attributes="/511 /512 /513" methods="/879 /880 /881 /882 /883 /884 /885 /886"/>
-  <data:Class name="HTMLParser" attributes="/514" methods="/887 /888 /889"/>
-  <data:Class name="CallbackHandler" attributes="/515 /516 /517 /518 /519 /520 /521 /522" methods="/890 /891 /892 /893 /894 /895 /896 /897 /898"/>
-  <data:Class name="SQLParser" attributes="/523" methods="/899 /900"/>
-  <data:Class name="SearchIndex" attributes="/524 /525 /526" methods="/901 /902 /903 /904 /905"/>
+  <data:Class name="CaptchaAction" attributes="/400 /401" methods="/1191 /629"/>
+  <data:Class name="CatalogXmlAction" attributes="/402 /403 /404 /405" methods="/1192 /630 /631 /632 /633 /634"/>
+  <data:Class name="DefaultControllerAction" attributes="/406 /407 /408" methods="/1193 /635 /636 /637"/>
+  <data:Class name="ImageAction" attributes="/409 /410 /411 /412" methods="/1194 /638"/>
+  <data:Class name="TagXmlAction" attributes="/413" methods="/1195 /639"/>
+  <data:Class name="CatalogFacade" attributes="/414 /415 /416" methods="/640 /641 /642 /643 /644 /645 /646 /647 /648 /649 /650 /651 /652 /653 /654 /655 /656 /1196 /657 /658 /659 /660 /661 /662 /663"/>
+  <data:Class name="ZipLocation" attributes="/417 /418 /419" methods="/664 /665 /666 /1197 /667 /668 /669"/>
+  <data:Class name="Address" attributes="/420 /421 /422 /423 /424 /425 /426 /427 /428" methods="/1198 /670 /671 /672 /1199 /673 /674 /675 /676 /677 /678 /679 /680 /681 /682 /683 /684 /685 /686 /687"/>
+  <data:Class name="Category" attributes="/429 /430 /431 /432" methods="/688 /689 /690 /691 /1200 /692 /693 /694 /695"/>
+  <data:Class name="Product" attributes="/433 /434 /435 /436 /437" methods="/696 /697 /698 /699 /1201 /1202 /700 /701 /702 /703 /704 /705"/>
+  <data:Class name="FileUploadResponse" attributes="/438 /439 /440 /441 /442 /443 /444 /445 /446 /447" methods="/1203 /1204 /706 /707 /708 /709 /710 /711 /712 /713 /714 /715 /716 /717 /718 /719 /720 /721 /722 /723 /724 /725"/>
+  <data:Class name="Item" attributes="/448 /449 /450 /451 /452 /453 /454 /455 /456 /457 /458 /459 /460" methods="/1205 /726 /727 /728 /729 /730 /731 /732 /733 /734 /735 /736 /737 /738 /739 /1206 /740 /741 /742 /743 /744 /745 /746 /747 /748 /749 /750 /751 /752 /753 /754 /755 /756"/>
+  <data:Class name="Tag" attributes="/461 /462 /463 /464" methods="/1207 /1208 /757 /758 /759 /760 /761 /762 /763 /764 /765 /766"/>
+  <data:Class name="SellerContactInfo" attributes="/465 /466 /467 /468" methods="/1209 /1210 /767 /768 /769 /770 /771 /772 /773 /774 /775"/>
+  <data:Class name="RatingBean" attributes="/469 /470 /471" methods="/1211 /776 /777 /778 /779 /780"/>
+  <data:Class name="PayPalBean" attributes="/472" methods="/1212 /781"/>
+  <data:Class name="PetstoreUtil" attributes="/473 /474" methods="/782 /783 /784 /785 /1213 /786 /787 /788"/>
+  <data:Class name="PetstoreConstants" attributes="/475 /476 /477 /478" methods="/1214"/>
+  <data:Class name="ImageScaler" attributes="/479 /480 /481 /482" methods="/1215 /789 /790 /1216 /791 /792 /793 /794"/>
+  <data:Class name="GeoCoder" attributes="/483 /484 /485 /486 /487 /488 /489" methods="/1217 /795 /796 /797 /798 /799 /800 /801 /802 /803 /804"/>
+  <data:Class name="GeoPoint" attributes="/490 /491 /492 /493 /494 /495 /496" methods="/805 /806 /807 /808 /809 /810 /811 /812 /813 /814 /815 /816 /817 /818 /819 /1218"/>
+  <data:Class name="MapBean" attributes="/497 /498 /499 /500 /501 /502 /503 /504" methods="/1219 /820 /821 /822 /823 /824 /825 /826 /827 /828 /829 /830 /831 /832 /833 /834 /835 /836 /837 /838 /839 /840 /841 /842 /843 /844 /845 /846 /847"/>
+  <data:Class name="IndexDocument" attributes="/505 /506" methods="/1220 /848 /1221 /1222 /849 /850 /851 /852 /853 /854 /855 /856 /857 /858 /859 /860 /861 /862 /863 /864 /865 /866 /867 /868 /869 /870 /871 /872"/>
+  <data:Class name="Indexer" attributes="/507" methods="/1223 /873 /874 /1224 /875"/>
+  <data:Class name="UpdateIndex" attributes="/508 /509 /510" methods="/876 /1225 /877 /878"/>
+  <data:Class name="SearchBean" attributes="/511 /512 /513" methods="/1226 /879 /880 /881 /882 /883 /884 /885 /886"/>
+  <data:Class name="HTMLParser" attributes="/514" methods="/887 /1227 /888 /889"/>
+  <data:Class name="CallbackHandler" attributes="/515 /516 /517 /518 /519 /520 /521 /522" methods="/1228 /890 /891 /892 /893 /894 /895 /896 /897 /898"/>
+  <data:Class name="SQLParser" attributes="/523" methods="/1229 /899 /900"/>
+  <data:Class name="SearchIndex" attributes="/524 /525 /526" methods="/1230 /901 /902 /903 /904 /905"/>
   <data:Class name="CompletionResult" methods="/906"/>
   <data:Class name="AutoCompleteUtilities" methods="/907"/>
-  <data:Class name="FileUploadStatus" methods="/908 /909 /910 /911 /912 /913 /914 /915"/>
+  <data:Class name="FileUploadStatus" methods="/908 /909 /910 /911 /912 /913 /914 /1231 /915"/>
   <data:Class name="FileUploadUtil" attributes="/527"/>
-  <data:Class name="GeoCoder" methods="/916 /917 /918"/>
-  <data:Class name="GeoPoint" methods="/919 /920 /921 /922"/>
-  <data:Class name="MapMarker" methods="/923"/>
-  <data:Class name="MapPoint" methods="/924 /925"/>
-  <data:Class name="BuyNowPostData" methods="/926 /927 /928 /929"/>
-  <data:Class name="Color" attributes="/528"/>
-  <data:Class name="Font" attributes="/529 /530"/>
+  <data:Class name="GeoCoder" methods="/1232 /916 /917 /918"/>
+  <data:Class name="GeoPoint" methods="/919 /920 /1233 /921 /922"/>
+  <data:Class name="MapMarker" methods="/1234 /923"/>
+  <data:Class name="MapPoint" methods="/1235 /924 /925"/>
+  <data:Class name="BuyNowPostData" methods="/1236 /926 /927 /928 /929"/>
+  <data:Class name="Color" attributes="/528" methods="/1237"/>
+  <data:Class name="Font" attributes="/529 /530" methods="/1238"/>
   <data:Class name="Graphics" methods="/930 /931 /932 /933 /934 /935 /936 /937"/>
   <data:Class name="Image" attributes="/531" methods="/938"/>
   <data:Class name="Toolkit" methods="/939 /940"/>
   <data:Class name="Graphics2D" methods="/941"/>
   <data:Class name="RenderingHints" attributes="/532 /533 /534 /535 /536 /537 /538 /539 /540 /541 /542 /543 /544 /545 /546 /547 /548 /549"/>
   <data:Class name="Key"/>
-  <data:Class name="BufferedImage" attributes="/550" methods="/942 /943 /944 /945 /946 /947"/>
-  <data:Class name="FilteredImageSource"/>
+  <data:Class name="BufferedImage" attributes="/550" methods="/1239 /942 /943 /944 /945 /946 /947"/>
+  <data:Class name="FilteredImageSource" methods="/1240"/>
   <data:Class name="ImageFilter"/>
   <data:Class name="RGBImageFilter" attributes="/551"/>
-  <data:Class name="AffineTransformOp" attributes="/552" methods="/948"/>
+  <data:Class name="AffineTransformOp" attributes="/552" methods="/1241 /948"/>
   <data:Class name="AffineTransform" methods="/949"/>
   <data:Class name="IOException"/>
-  <data:Class name="PrintStream" methods="/950"/>
+  <data:Class name="PrintStream" methods="/950 /1242"/>
   <data:Class name="FilterOutputStream"/>
   <data:Class name="OutputStream" methods="/951 /952"/>
   <data:Class name="UnsupportedEncodingException"/>
-  <data:Class name="PrintWriter" methods="/954 /955 /956 /957"/>
+  <data:Class name="PrintWriter" methods="/1243 /954 /1244 /955 /956 /957"/>
   <data:Class name="Writer" methods="/958"/>
-  <data:Class name="StringWriter" methods="/959"/>
-  <data:Class name="File" methods="/960 /961"/>
-  <data:Class name="FileInputStream" methods="/962"/>
+  <data:Class name="StringWriter" methods="/1245 /959"/>
+  <data:Class name="File" methods="/1246 /960 /961"/>
+  <data:Class name="FileInputStream" methods="/1247 /962"/>
   <data:Class name="InputStream"/>
-  <data:Class name="BufferedReader" methods="/963 /964"/>
+  <data:Class name="BufferedReader" methods="/1248 /963 /964"/>
   <data:Class name="Reader"/>
-  <data:Class name="InputStreamReader"/>
-  <data:Class name="StringReader"/>
+  <data:Class name="InputStreamReader" methods="/1249"/>
+  <data:Class name="StringReader" methods="/1250"/>
   <data:Class name="Integer" methods="/965 /966 /967"/>
   <data:Class name="Number"/>
-  <data:Class name="String" methods="/968 /969 /970 /971 /972 /973 /974 /975 /976 /977 /978 /979 /980 /981 /982"/>
-  <data:Class name="IllegalArgumentException"/>
-  <data:Class name="RuntimeException"/>
+  <data:Class name="String" methods="/968 /969 /970 /971 /972 /973 /974 /975 /976 /977 /978 /979 /980 /981 /1251 /982"/>
+  <data:Class name="IllegalArgumentException" methods="/1252"/>
+  <data:Class name="RuntimeException" methods="/1253"/>
   <data:Class name="Exception"/>
   <data:Class name="Throwable" methods="/983 /984 /985 /986 /987"/>
-  <data:Class name="StringBuffer" methods="/988 /989 /990 /991 /992 /993 /994"/>
+  <data:Class name="StringBuffer" methods="/1254 /988 /989 /1255 /990 /991 /992 /993 /994"/>
   <data:Class name="AbstractStringBuilder"/>
   <data:Class name="Character" methods="/995"/>
   <data:Class name="Long" methods="/996 /997 /998 /999"/>
@@ -169,38 +169,38 @@
   <data:Class name="System" attributes="/553" methods="/1003 /1004"/>
   <data:Class name="Class" methods="/1005 /1006 /1007 /1008"/>
   <data:Class name="NumberFormatException"/>
-  <data:Class name="StringBuilder" methods="/1009 /1010"/>
+  <data:Class name="StringBuilder" methods="/1256 /1009 /1010 /1257"/>
   <data:Class name="Boolean" attributes="/554 /555"/>
-  <data:Class name="NullPointerException"/>
+  <data:Class name="NullPointerException" methods="/1258"/>
   <data:Class name="Double" methods="/1011 /1012"/>
   <data:Class name="SecurityException"/>
   <data:Class name="Float" methods="/1013"/>
-  <data:Class name="IllegalStateException"/>
-  <data:Class name="Random" methods="/1014 /1015"/>
-  <data:Class name="HashMap" methods="/1016 /1017"/>
+  <data:Class name="IllegalStateException" methods="/1259"/>
+  <data:Class name="Random" methods="/1014 /1260 /1015"/>
+  <data:Class name="HashMap" methods="/1261 /1016 /1017"/>
   <data:Class name="AbstractMap"/>
-  <data:Class name="StringTokenizer" methods="/1028 /1029 /1030"/>
-  <data:Class name="ArrayList" methods="/1033 /1034 /1035 /1036 /1037"/>
+  <data:Class name="StringTokenizer" methods="/1262 /1028 /1029 /1030"/>
+  <data:Class name="ArrayList" methods="/1263 /1033 /1034 /1035 /1036 /1037"/>
   <data:Class name="AbstractList"/>
   <data:Class name="AbstractCollection"/>
   <data:Class name="Hashtable" methods="/1038 /1039"/>
   <data:Class name="Dictionary"/>
-  <data:Class name="Date" methods="/1040"/>
+  <data:Class name="Date" methods="/1040 /1264 /1265"/>
   <data:Class name="Locale" attributes="/556"/>
-  <data:Class name="Vector"/>
+  <data:Class name="Vector" methods="/1266"/>
   <data:Class name="Arrays" methods="/1041"/>
   <data:Class name="EventObject"/>
-  <data:Class name="Properties" methods="/1042"/>
-  <data:Class name="PropertyResourceBundle"/>
+  <data:Class name="Properties" methods="/1267 /1042"/>
+  <data:Class name="PropertyResourceBundle" methods="/1268"/>
   <data:Class name="ResourceBundle" methods="/1043"/>
   <data:Class name="Level" attributes="/557 /558 /559 /560"/>
   <data:Class name="Logger" methods="/1044 /1045 /1046 /1047 /1048"/>
   <data:Class name="URLDecoder" methods="/1049"/>
-  <data:Class name="URL" methods="/1050 /1051"/>
+  <data:Class name="URL" methods="/1050 /1269 /1051"/>
   <data:Class name="URLConnection" methods="/1052 /1053 /1054"/>
   <data:Class name="MalformedURLException"/>
   <data:Class name="URLEncoder" methods="/1055"/>
-  <data:Class name="BigDecimal" attributes="/561" methods="/1056 /1057 /1058 /1059"/>
+  <data:Class name="BigDecimal" attributes="/561" methods="/1270 /1056 /1057 /1058 /1059"/>
   <data:Class name="MathContext"/>
   <data:Class name="NumberFormat" methods="/1060 /1061"/>
   <data:Class name="Format" methods="/1062"/>
@@ -217,7 +217,7 @@
   <data:Class name="FacesContext" methods="/1113 /1114 /1115 /1116"/>
   <data:Class name="ExternalContext" methods="/1117 /1118 /1119 /1120"/>
   <data:Class name="ResponseWriter" methods="/1121"/>
-  <data:Class name="SelectItem"/>
+  <data:Class name="SelectItem" methods="/1271"/>
   <data:Class name="Application" methods="/1122"/>
   <data:Class name="ImageIO" methods="/1123 /1124 /1125"/>
   <data:Class name="ValueExpression" methods="/1126"/>
@@ -232,27 +232,27 @@
   <data:Class name="EditorKit"/>
   <data:Class name="HTMLEditorKit"/>
   <data:Class name="Parser"/>
-  <data:Class name="ParserCallback"/>
+  <data:Class name="ParserCallback" methods="/1272"/>
   <data:Class name="HTML"/>
   <data:Class name="Tag" methods="/1150"/>
   <data:Class name="Attribute" attributes="/565 /566 /567"/>
-  <data:Class name="ParserDelegator" methods="/1151"/>
-  <data:Class name="ResponseFactory" methods="/1152"/>
-  <data:Class name="IndexWriter" methods="/1153 /1154 /1155 /1156 /1157"/>
+  <data:Class name="ParserDelegator" methods="/1273 /1151"/>
+  <data:Class name="ResponseFactory" methods="/1274 /1152"/>
+  <data:Class name="IndexWriter" methods="/1275 /1153 /1154 /1155 /1156 /1157"/>
   <data:Class name="IndexReader" methods="/1158 /1159 /1160 /1161 /1162"/>
-  <data:Class name="Term"/>
+  <data:Class name="Term" methods="/1276"/>
   <data:Class name="Analyzer"/>
-  <data:Class name="StandardAnalyzer"/>
-  <data:Class name="Document" methods="/1163 /1164 /1165 /1166 /1167"/>
-  <data:Class name="Field" methods="/1168 /1169 /1170"/>
+  <data:Class name="StandardAnalyzer" methods="/1277"/>
+  <data:Class name="Document" methods="/1278 /1163 /1164 /1165 /1166 /1167"/>
+  <data:Class name="Field" methods="/1279 /1168 /1169 /1170"/>
   <data:Class name="Store" attributes="/568"/>
   <data:Class name="Index" attributes="/569 /570"/>
   <data:Class name="Parameter"/>
   <data:Class name="Hits" methods="/1171 /1172"/>
   <data:Class name="Searcher" methods="/1173 /1174"/>
-  <data:Class name="IndexSearcher"/>
+  <data:Class name="IndexSearcher" methods="/1280"/>
   <data:Class name="Query"/>
-  <data:Class name="QueryParser" methods="/1175 /1176"/>
+  <data:Class name="QueryParser" methods="/1281 /1175 /1176"/>
   <data:Class name="Operator" attributes="/571"/>
   <data:Class name="SAXException"/>
   <data:Class name="ControllerAction" methods="/583"/>
@@ -1184,4 +1184,102 @@
   <data:Method name="getTagName" status="public"/>
   <data:Method name="getLength" status="public"/>
   <data:Method name="item" status="public"/>
+  <data:Method name="SimpleCaptcha" status="public" returnType="/76"/>
+  <data:Method name="RandomString" status="public" returnType="/77"/>
+  <data:Method name="BlueFilter" status="public" returnType="/78"/>
+  <data:Method name="AutocompleteBean" status="public" returnType="/80"/>
+  <data:Method name="EntryFilter" status="public" returnType="/81"/>
+  <data:Method name="AddressBean" status="public" returnType="/82"/>
+  <data:Method name="FileUploadBean" status="public" returnType="/83"/>
+  <data:Method name="CaptchaAction" status="public" returnType="/85"/>
+  <data:Method name="CatalogXmlAction" status="public" returnType="/86"/>
+  <data:Method name="DefaultControllerAction" status="public" returnType="/87"/>
+  <data:Method name="ImageAction" status="public" returnType="/88"/>
+  <data:Method name="TagXmlAction" status="public" returnType="/89"/>
+  <data:Method name="CatalogFacade" status="public" returnType="/90"/>
+  <data:Method name="ZipLocation" status="public" returnType="/91"/>
+  <data:Method name="Address" status="public" returnType="/92"/>
+  <data:Method name="Address" status="public" returnType="/92"/>
+  <data:Method name="Category" status="public" returnType="/93"/>
+  <data:Method name="Product" status="public" returnType="/94"/>
+  <data:Method name="Product" status="public" returnType="/94"/>
+  <data:Method name="FileUploadResponse" status="public" returnType="/95"/>
+  <data:Method name="FileUploadResponse" status="public" returnType="/95"/>
+  <data:Method name="Item" status="public" returnType="/96"/>
+  <data:Method name="Item" status="public" returnType="/96"/>
+  <data:Method name="Tag" status="public" returnType="/97"/>
+  <data:Method name="Tag" status="public" returnType="/97"/>
+  <data:Method name="SellerContactInfo" status="public" returnType="/98"/>
+  <data:Method name="SellerContactInfo" status="public" returnType="/98"/>
+  <data:Method name="RatingBean" status="public" returnType="/99"/>
+  <data:Method name="PayPalBean" status="public" returnType="/100"/>
+  <data:Method name="PetstoreUtil" status="public" returnType="/101"/>
+  <data:Method name="PetstoreConstants" status="private" returnType="/102"/>
+  <data:Method name="ImageScaler" status="public" returnType="/103"/>
+  <data:Method name="ImageScaler" status="public" returnType="/103"/>
+  <data:Method name="GeoCoder" status="public" returnType="/104"/>
+  <data:Method name="GeoPoint" status="public" returnType="/105"/>
+  <data:Method name="MapBean" status="public" returnType="/106"/>
+  <data:Method name="IndexDocument" status="public" returnType="/107"/>
+  <data:Method name="IndexDocument" status="public" returnType="/107"/>
+  <data:Method name="IndexDocument" status="public" returnType="/107"/>
+  <data:Method name="Indexer" status="public" returnType="/108"/>
+  <data:Method name="Indexer" status="public" returnType="/108"/>
+  <data:Method name="UpdateIndex" status="public" returnType="/109"/>
+  <data:Method name="SearchBean" status="public" returnType="/110"/>
+  <data:Method name="HTMLParser" status="public" returnType="/111"/>
+  <data:Method name="CallbackHandler" status="none" returnType="/112"/>
+  <data:Method name="SQLParser" status="public" returnType="/113"/>
+  <data:Method name="SearchIndex" status="public" returnType="/114"/>
+  <data:Method name="FileUploadStatus" status="public" returnType="/117"/>
+  <data:Method name="GeoCoder" status="public" returnType="/119"/>
+  <data:Method name="GeoPoint" status="public" returnType="/120"/>
+  <data:Method name="MapMarker" status="public" returnType="/121"/>
+  <data:Method name="MapPoint" status="public" returnType="/122"/>
+  <data:Method name="BuyNowPostData" status="public" returnType="/123"/>
+  <data:Method name="Color" status="public" returnType="/124"/>
+  <data:Method name="Font" status="public" returnType="/125"/>
+  <data:Method name="BufferedImage" status="public" returnType="/132"/>
+  <data:Method name="FilteredImageSource" status="public" returnType="/133"/>
+  <data:Method name="AffineTransformOp" status="public" returnType="/136"/>
+  <data:Method name="PrintStream" status="public" returnType="/139"/>
+  <data:Method name="PrintWriter" status="public" returnType="/143"/>
+  <data:Method name="PrintWriter" status="public" returnType="/143"/>
+  <data:Method name="StringWriter" status="public" returnType="/145"/>
+  <data:Method name="File" status="public" returnType="/146"/>
+  <data:Method name="FileInputStream" status="public" returnType="/147"/>
+  <data:Method name="BufferedReader" status="public" returnType="/149"/>
+  <data:Method name="InputStreamReader" status="public" returnType="/151"/>
+  <data:Method name="StringReader" status="public" returnType="/152"/>
+  <data:Method name="String" status="public" returnType="/155"/>
+  <data:Method name="IllegalArgumentException" status="public" returnType="/156"/>
+  <data:Method name="RuntimeException" status="public" returnType="/157"/>
+  <data:Method name="StringBuffer" status="public" returnType="/160"/>
+  <data:Method name="StringBuffer" status="public" returnType="/160"/>
+  <data:Method name="StringBuilder" status="public" returnType="/169"/>
+  <data:Method name="StringBuilder" status="public" returnType="/169"/>
+  <data:Method name="NullPointerException" status="public" returnType="/171"/>
+  <data:Method name="IllegalStateException" status="public" returnType="/175"/>
+  <data:Method name="Random" status="public" returnType="/176"/>
+  <data:Method name="HashMap" status="public" returnType="/177"/>
+  <data:Method name="StringTokenizer" status="public" returnType="/179"/>
+  <data:Method name="ArrayList" status="public" returnType="/180"/>
+  <data:Method name="Date" status="public" returnType="/185"/>
+  <data:Method name="Date" status="public" returnType="/185"/>
+  <data:Method name="Vector" status="public" returnType="/187"/>
+  <data:Method name="Properties" status="public" returnType="/190"/>
+  <data:Method name="PropertyResourceBundle" status="public" returnType="/191"/>
+  <data:Method name="URL" status="public" returnType="/196"/>
+  <data:Method name="BigDecimal" status="public" returnType="/200"/>
+  <data:Method name="SelectItem" status="public" returnType="/217"/>
+  <data:Method name="ParserCallback" status="public" returnType="/232"/>
+  <data:Method name="ParserDelegator" status="public" returnType="/236"/>
+  <data:Method name="ResponseFactory" status="public" returnType="/237"/>
+  <data:Method name="IndexWriter" status="public" returnType="/238"/>
+  <data:Method name="Term" status="public" returnType="/240"/>
+  <data:Method name="StandardAnalyzer" status="public" returnType="/242"/>
+  <data:Method name="Document" status="public" returnType="/243"/>
+  <data:Method name="Field" status="public" returnType="/244"/>
+  <data:Method name="IndexSearcher" status="public" returnType="/250"/>
+  <data:Method name="QueryParser" status="public" returnType="/252"/>
 </xmi:XMI>
